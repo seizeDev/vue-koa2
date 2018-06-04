@@ -1,0 +1,72 @@
+{
+  "name": "koa2-vue-test",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "lizhen <zhen.li@cafintech.com>",
+  "private": true,
+  "scripts": {
+    "start": "node ./server/index.js development",
+    "production": "node ./server/index.js production",
+    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
+    "build": "node build/build.js && npm run production"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "content-disposition": "^0.5.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.0",
+    "defaults": "^1.0.3",
+    "ee-first": "^1.1.1",
+    "element-ui": "^2.4.0",
+    "error-inject": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "is-generator-function": "^1.0.7",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-generator": "^1.1.16",
+    "koa-onerror": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-webpack": "^4.0.0",
+    "md5": "^2.2.1",
+    "mime-types": "^2.1.18",
+    "on-finished": "^2.3.0",
+    "onetime": "^2.0.1",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "ora": "^2.1.0",
+    "semver": "^5.5.0",
+    "signal-exit": "^3.0.2",
+    "style-loader": "^0.21.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^3.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.10.2",
+    "webpack-hot-middleware": "^2.22.2",
+    "webpack-merge": "^4.1.2",
+    "worker-farm": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/extract-text-webpack-plugin": "^3.0.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+  }
+}
