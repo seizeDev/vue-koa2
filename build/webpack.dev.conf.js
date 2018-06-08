@@ -6,20 +6,12 @@ let devConfig =  merge(baseConfig, {
   output: {
       path: '/'
   },
-  devServer: {
-    watch: true,
-    inline:true,
-    reload:true,
-    // clientLogLevel: 'warning',
-    historyApiFallback: true,
-    hot: true,
-    proxy: {}
-  },
   devtool: '#source-map',
   plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin()
-  ]
+  ],
+  mode:"development"
 });
 
 module.exports = devConfig;

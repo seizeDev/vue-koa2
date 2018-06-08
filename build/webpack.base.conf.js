@@ -11,7 +11,7 @@ function resolve (dir) {
 module.exports = {
   /* 输入文件 */
   entry: {
-      index: [path.resolve(__dirname, '../src/main.js')]
+      index: ['webpack-hot-middleware/client?noInfo=true&reload=true',path.resolve(__dirname, '../src/main.js')]
   },
   output: {
       /* 输出目录，没有则新建 */
@@ -54,7 +54,7 @@ module.exports = {
           template: path.resolve(__dirname, '../index.html'),
           inject: true
       }),
-      new ExtractTextPlugin("style.css")
+      new ExtractTextPlugin("style.css"),
   ],
   resolve: {
     extensions: ['.js', '.vue', '.json', '.ts'],

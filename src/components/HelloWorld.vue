@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg123 }}</h1>
-    <h2>Essential1 Links</h2>
+    <h1>{{ msg }}</h1>
+    <h2>Essential121221</h2>
     <ul>
       <li>
         <a
@@ -94,7 +94,7 @@ export default {
     }
   },
   mounted(){
-    console.log('1234')
+    console.log('123455')
     axiosService.getlistService().then((data) => {
       console.log(data)
     })

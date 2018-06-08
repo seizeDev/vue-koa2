@@ -11,6 +11,9 @@ const bodyParser = require('koa-bodyparser');
 const webpackConfig = require("../build/webpack.dev.conf");
 const devMiddleware = require("../build/devMiddleware");
 const hotMiddleware = require('../build/hotMiddleware');
+if(args && args[0] == "production"){
+  webpackConfig.mode = "production"
+}
 const compiler = webpack(webpackConfig);
 // 生产打包并且监听
 if(args && args[0] == "production"){
