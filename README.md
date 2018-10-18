@@ -27,3 +27,5 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#如果遇到throw new Error('Cyclic dependency' + nodeRep)的问题
+#必须当前安装：cnpm i --save-dev html-webpack-plugin@next

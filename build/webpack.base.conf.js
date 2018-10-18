@@ -11,7 +11,7 @@ function resolve (dir) {
 module.exports = {
   /* 输入文件 */
   entry: {
-      index: ['webpack-hot-middleware/client?noInfo=true&reload=true',path.resolve(__dirname, '../src/main.js')]
+      index: [path.resolve(__dirname, '../src/main.js')]
   },
   output: {
       /* 输出目录，没有则新建 */
