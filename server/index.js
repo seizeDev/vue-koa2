@@ -1,6 +1,7 @@
 const Koa = require('koa');
 // koa配置
 const Config = require('../config/koa.config');
+const path = require('path');
 const args = process.argv.splice(2);
 console.log(args)
 const app = new Koa();
@@ -13,13 +14,10 @@ const devMiddleware = require("../build/devMiddleware");
 const hotMiddleware = require('../build/hotMiddleware');
 if(args && args[0] == "production"){
   webpackConfig.mode = "production"
-  webpackConfig.entry = { index:
-    ['/Users/lizhen/Desktop/index/finlink-insurance-platform/src/main.js'] }
+  webpackConfig.entry = { index: [path.resolve(__dirname, '../src/main.js')] }
   console.log(webpackConfig)
 }else{
-  webpackConfig.entry = { index:
-    [ 'webpack-hot-middleware/client?noInfo=true&reload=true',
-      '/Users/lizhen/Desktop/index/finlink-insurance-platform/src/main.js' ] }
+  webpackConfig.entry = { index: ['webpack-hot-middleware/client?noInfo=true&reload=true', path.resolve(__dirname, '../src/main.js')] }
 
 }
 const compiler = webpack(webpackConfig);
